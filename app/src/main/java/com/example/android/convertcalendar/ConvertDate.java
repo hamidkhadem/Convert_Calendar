@@ -48,8 +48,9 @@ public class ConvertDate {
 
 */
     //Covert Persian Date to GregorianCalender
-    public static Date PersianToGregorianCalender(Date persianDate) {
+    public static Date PersianToGregorianCalender(int y,int m, int d) {
         //Calculate day of year and year of gregorian calendar
+        Date persianDate = new Date(y,m,d);
         int dayOfYear = DayOfPersianYear(persianDate);
         int gregorianYear = 621 + persianDate.getYear();
 
